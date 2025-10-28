@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ahmed. — Personal Site</title>
+  <meta name="description" content="Personal website of Ahmed K. showcasing skills, projects, and resume." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/Ahmed Favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/Ahmed Favicon.png" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Home">
+        <img src="./assets/Ahmed_logo-removebg-preview.png" alt="Ahmed logo">
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero -->
+    <section class="section hero" aria-labelledby="intro-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 id="intro-title">Hi, I’m Ahmed — a budding web developer.</h1>
+          <p>I enjoy building clean, responsive websites and learning modern web fundamentals. This personal site highlights my background, projects, and how to reach me.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Contact Me</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <figure>
+            <img src="./assets/Ahmed slika.jpg" alt="Portrait photo of Ahmed" />
+            <figcaption class="visually-hidden">Ahmed portrait photograph</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">About Me</h2>
+        <div class="content-columns">
+          <p>I’m a self-motivated learner focusing on HTML and CSS, practicing accessibility, semantic markup, and responsive design. My goal is to create delightful user experiences and keep leveling up with each project.</p>
+          <p>Outside coding, I enjoy exploring new tech, reading, and improving my design sense by studying great websites.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section alt" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title">Projects</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>CatMeet — Landing Page</h3>
+            <p>A responsive Bootstrap landing page with pricing, modals, and accessibility improvements.</p>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>Bootstrap</li>
+            </ul>
+            <div class="actions">
+              <a class="btn small" href="../Bootstrap/CatMeet Project/index.html" target="_blank" rel="noopener noreferrer">Open</a>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Capstone 1 — Online Resume</h3>
+            <p>A simple, semantic resume page. Linked here as part of this portfolio.</p>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li>
+            </ul>
+            <div class="actions">
+              <a class="btn small" href="../Capstone Project 1 - Online Resume/index.html" target="_blank" rel="noopener noreferrer">Open</a>
+            </div>
+          </article>
+          <article class="card">
+            <h3>Placeholder Project</h3>
+            <p>A future project slot. I’ll add more as I build.</p>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li>
+            </ul>
+            <div class="actions">
+              <a class="btn small" href="#">Soon</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="section" aria-labelledby="resume-title">
+      <div class="container">
+        <h2 id="resume-title">Resume</h2>
+        <div class="resume-grid">
+          <div>
+            <h3>Education</h3>
+            <ul class="list">
+              <li><strong>Web Development Coursework</strong> — Self-directed learning</li>
+            </ul>
+            <h3>Skills</h3>
+            <ul class="list cols">
+              <li>HTML5</li><li>CSS3</li><li>Responsive Design</li><li>Accessibility</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Experience</h3>
+            <ul class="list">
+              <li>Personal projects focused on layout, semantics, and UI polish.</li>
+            </ul>
+            <div class="resume-actions">
+              <a class="btn" href="./assets/Ahmed Pupalovic CV 2025 novo.pdf" target="_blank" rel="noopener noreferrer">View CV (PDF)</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section alt" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Contact</h2>
+        <p>If you’d like to connect, feel free to reach out via email.</p>
+        <p>
+          <a class="btn" href="mailto:pupalovicahmed@gmail.com">pupalovicahmed@gmail.com</a>
+          <a class="btn" href="https://www.linkedin.com/in/ahmed-pupalovic-80929b142/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>© <span id="year">2025</span> Ahmed. All rights reserved.</p>
+      <a href="#home" class="back-to-top">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
