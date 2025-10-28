@@ -39,15 +39,24 @@ a{color:inherit;text-decoration:none}
 
 /* Mobile hamburger */
 .nav-toggle{display:none}
-.hamburger{display:none;cursor:pointer;padding:8px}
+.hamburger{display:none;cursor:pointer;padding:8px;margin-left:auto}
 .hamburger span{display:block;width:26px;height:2px;background:var(--text);margin:6px 0;transition:transform .2s ease, opacity .2s ease}
 
 @media (max-width: 700px){
-  .nav{position:absolute;top:100%;right:0;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.08);flex-direction:column;gap:0;overflow:hidden;max-height:0;transition:max-height .2s ease; z-index:999}
+  /* Large, centered logo aligned to the left inside the container */
+  .nav-wrap{ position:relative; justify-content:flex-start; padding-left:0; padding-right:72px }
+  .brand{ width:120px; height:40px; overflow:visible; margin-left:0 }
+  .brand img{ width:100px; height:100px; top:45%; left:-12px; transform:translateY(-60%); z-index:2 }
+  .nav{position:absolute;top:100%;right:0;background:#fff;border:1px solid var(--border);border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.08);flex-direction:column;gap:0;overflow:hidden;max-height:0;transition:max-height .2s ease; z-index:999; min-width: 220px}
   .nav a{display:block;padding:12px 16px}
-  .hamburger{display:block}
+  .hamburger{display:block;position:absolute;right:0;top:50%;transform:translateY(-50%); z-index:3}
   .nav-wrap{position:relative}
   .nav-toggle:checked ~ nav .nav{max-height:260px}
+
+  /* Hamburger to X animation */
+  .nav-toggle:checked + .hamburger span:nth-child(1){transform: translateY(8px) rotate(45deg)}
+  .nav-toggle:checked + .hamburger span:nth-child(2){opacity:0}
+  .nav-toggle:checked + .hamburger span:nth-child(3){transform: translateY(-8px) rotate(-45deg)}
 }
 
 /* Sections */
@@ -118,10 +127,24 @@ a{color:inherit;text-decoration:none}
   .hero-grid{grid-template-columns: 1fr;}
   .hero-photo{order:-1}
 }
+@media (max-width: 1000px){
+  .cards{grid-template-columns: repeat(2, minmax(0,1fr));}
+  .content-columns{columns: 1 100%}
+}
 @media (max-width: 700px){
-  .brand img{height: 40px;}
+  .brand img{height: 36px;}
   .nav{gap:14px}
   .content-columns{columns: 1 100%}
   .cards{grid-template-columns: 1fr}
   .resume-grid{grid-template-columns: 1fr}
+  .hero{padding-top:70px}
+}
+
+/* Tiny phones */
+@media (max-width: 480px){
+  .brand{ width:130px; height:40px }
+  .brand img{ width:120px; height:120px }
+  .nav-wrap{ padding-right:56px }
+  .nav{ min-width: 200px; width: calc(100vw - 24px) }
+  .nav a{ padding: 14px 16px }
 }
